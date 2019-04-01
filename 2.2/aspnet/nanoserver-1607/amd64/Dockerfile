@@ -29,9 +29,9 @@ FROM mcr.microsoft.com/windows/nanoserver:10.0.14393.2551
 COPY --from=installer ["/dotnet", "/Program Files/dotnet"]
 
 # In order to set system PATH, ContainerAdministrator must be used
-USER ContainerAdministrator
+#USER ContainerAdministrator
 RUN setx /M PATH "%PATH%;C:\Program Files\dotnet"
-USER ContainerUser
+#USER ContainerUser
 
 # Configure web servers to bind to port 80 when present
 ENV ASPNETCORE_URLS=http://+:80 `
