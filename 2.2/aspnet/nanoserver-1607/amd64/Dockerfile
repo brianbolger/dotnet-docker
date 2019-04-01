@@ -22,7 +22,7 @@ RUN Invoke-WebRequest -OutFile aspnetcore.zip https://dotnetcli.blob.core.window
 
 # Runtime image
 #FROM mcr.microsoft.com/windows/nanoserver:1809
-FROM mcr.microsoft.com/windows/nanoserver:10.0.14393.2551
+FROM mcr.microsoft.com/windows/servercore:ltsc2016 AS installer
 
 # Note: Runtime image's SHELL is the CMD shell (different than the installer image).
 
